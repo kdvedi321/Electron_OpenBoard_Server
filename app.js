@@ -7,7 +7,7 @@ const socketServer = require("socket.io")(httpServer);
 // const path = require("path");
 app.use(express.static("activity"));
 socketServer.on("connection", function (socket) {
-    console.log("New client connected")
+    console.log("New client connected");
     console.log(socket.id);
     // listener=> recieve
     socket.on("colorChange", function (color) {
